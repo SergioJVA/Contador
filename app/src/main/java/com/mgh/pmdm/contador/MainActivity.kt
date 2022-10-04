@@ -25,13 +25,23 @@ class MainActivity : AppCompatActivity() {
 
         // Referencia al botón
         val btAdd=findViewById<Button>(R.id.btAdd)
+        val btRes=findViewById<Button>(R.id.btRes)
 
         // Asociaciamos una expresióin lambda como
         // respuesta (callback) al evento Clic sobre
         // el botón
+        btRes.setOnClickListener {
+                contador--
+                textViewContador.setText(contador.toString())
+
+
+        }
+
         btAdd.setOnClickListener {
             contador++
             textViewContador.setText(contador.toString())
+
+
         }
 
     }
